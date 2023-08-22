@@ -1,9 +1,10 @@
 import React from "react";
 import "./Main.css";
 import aosCall from "../AOS/AOS";
-
+import Typewriter from "typewriter-effect";
 export default function Main() {
   aosCall();
+
   return (
     <>
       <div
@@ -26,41 +27,28 @@ export default function Main() {
                     data-aos-delay="1500"
                     data-aos-easing="linear"
                   >
-                    <h6>Welcome to Space Dynamic</h6>
+                    <h6>به وبسایت اتم کدینگ خوش آمدید.</h6>
                     <h2>
-                      We Make <em>Digital Ideas</em> &amp; <span>SEO</span>{" "}
-                      Marketing
+                      <Typewriter
+                        onInit={(typeWriter) => {
+                          typeWriter
+                            .pauseFor(2000)
+                            .typeString("سلام، محمد ابراهیمی هستم.")
+                            .start()
+                            .pauseFor(1000)
+                            .deleteAll()
+                            .typeString(`<em>توسعه دهنده فرانت اند.</em>`)
+                            .start()
+                            .pauseFor(2000);
+                        }}
+                        options={{
+                          loop: true,
+                        }}
+                      />
                     </h2>
-                    <p>
-                      Space Dynamic is a professional looking HTML template
-                      using a Bootstrap 5 (beta 2). This CSS template is free
-                      for you provided by{" "}
-                      <a
-                        rel="nofollow"
-                        href="https://templatemo.com/page/1"
-                        target="_parent"
-                      >
-                        TemplateMo
-                      </a>
-                      .
-                    </p>
-                    <form id="search" action="#" method="GET">
-                      <fieldset>
-                        <input
-                          type="address"
-                          name="address"
-                          className="email"
-                          placeholder="Your website URL..."
-                          autoComplete="on"
-                          required
-                        />
-                      </fieldset>
-                      <fieldset>
-                        <button type="submit" className="main-button">
-                          Analyze Site
-                        </button>
-                      </fieldset>
-                    </form>
+                    <div className="main-red-button mt-3">
+                      <a href="#contact">ارسال پیام</a>
+                    </div>
                   </div>
                 </div>
                 <div className="col-lg-6">

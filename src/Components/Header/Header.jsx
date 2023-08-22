@@ -15,13 +15,16 @@ export default function Header() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <nav className="main-nav">
-                <a href="index.html" className="logo">
+              <nav className="main-nav d-flex justify-content-between">
+                <a
+                  href="https://www.youtube.com/channel/UCCo_mRVm8QaxfvLN4rtkwQg"
+                  className="logo"
+                  target="_blank"
+                >
                   <h4>
-                    اتم<span> کد</span>
+                    اتم<span> کدینگ</span>
                   </h4>
                 </a>
-
                 <ul className="nav">
                   <li className="scroll-to-section">
                     <a href="#top" className="active">
@@ -41,12 +44,9 @@ export default function Header() {
                     <a href="#blog">بلاگ</a>
                   </li>
                   <li className="scroll-to-section">
-                    <a href="#contact">ارتباط باما</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <div className="main-red-button">
+                    {/* <div className="main-red-button">
                       <a href="#contact">ارسال پیام</a>
-                    </div>
+                    </div> */}
                   </li>
                 </ul>
                 <a className="menu-trigger">
